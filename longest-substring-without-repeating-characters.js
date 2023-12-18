@@ -31,8 +31,6 @@ const lengthOfLongestSubstring = function (s) {
     else {
       stack = stack.slice(stack.findIndex((element) => element === e) + 1, undefined);
       updateSubString(subString, stack);
-      // console.log(subString);
-      // stack = [];
       stack.push(e);
     }
   });
@@ -41,15 +39,6 @@ const lengthOfLongestSubstring = function (s) {
     subString = stack;
   }
   
-  // console.log(subString);
   return subString.length;
 
 };
-
-console.log(lengthOfLongestSubstring('dvdf'));
-// const subString = []
-// stack = stack.slice(stack.findIndex((element) => element === 'd'), undefined);
-// console.log(stack.slice(0 + 1, undefined));
-// console.log(isExist([' '], ' '));
-// updateSubString(subString, ['a', 'b', 'c']);
-// console.log(subString);
